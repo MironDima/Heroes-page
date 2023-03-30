@@ -8,6 +8,7 @@ const ajax = () => {
 			.catch(error => console.log(error))
 	}
 	getData()
+	console.log('hi');
 }
 
 export default ajax

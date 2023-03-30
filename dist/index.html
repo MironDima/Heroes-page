@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+		crossorigin="anonymous" defer></script>
 	<link rel="stylesheet" href="./css/fontello.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<script src="./main.js" defer></script>
@@ -13,47 +18,71 @@
 </head>
 
 <body>
-	<div class="container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-			  <a class="navbar-brand" href="#">Navbar</a>
-			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<nav class="navbar  sticky-top  navbar-expand-sm navbar-light" style="background-color: #494a4b;">
+		<div class="container-fluid">
+			<a class="navbar-brand" style="font-weight: 400;" href="#">Heroes page</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			  </button>
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				  <li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">Home</a>
-				  </li>
-			
-				  <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-					  Link
-					</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-					  <li><a class="dropdown-item" href="#">Action</a></li>
-					  <li><a class="dropdown-item" href="#">Another action</a></li>
-					  <li><hr class="dropdown-divider"></li>
-					  <li><a class="dropdown-item" href="#">Something else here</a></li>
-					</ul>
-				  </li>
+					<li class="nav-item">
+						<a class="nav-link active" style="font-weight: 600; font-size: 17px;" aria-current="page"
+							href="#">Home</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle active" style="font-weight: 600" href="#" id="navbarDarkDropdownMenuLink" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Category movies
+						</a>
+						<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+							<li><a class="dropdown-item drop-list" href="#">The Avengers</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Avengers: Infinity War</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Avengers: Endgame</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Avengers: Age of Ultron</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Doctor Strange</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Captain America: Civil War</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Captain America: The First Avenger</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Captain America: The Winter Soldier</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Captain America: The Winter Soldier</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Ant-Man</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Ant-Man and the Wasp</a></li>
+							<li><a class="dropdown-item drop-list" href="#"> Black Panther</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Iron Man</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Iron Man 2</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Iron Man 3</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Thor: Ragnarok</a></li>
+							<li><a class="dropdown-item drop-list" href="#">The Dark World</a></li>
+							<li><a class="dropdown-item drop-list" href="#"> The Incredible Hulk</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Spider-Man: Homecoming</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Spider-Man: Far From Home</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Guardians of the Galaxy</a></li>
+							<li><a class="dropdown-item drop-list" href="#">Guardians of the Galaxy</a></li>
+						</ul>
+					</li>
 				</ul>
 				<form class="d-flex">
-				  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-				  <button class="btn btn-outline-success" type="submit">Search</button>
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
 				</form>
-			  </div>
 			</div>
-		  </nav>
+		</div>
+	</nav>
 
 
-		 <main class="block_heroes">
-				<div class="row">
-					
-				</div>
+	<main>
+		<div class="container-fluid block">
+			<div class="row">
 			</div>
-		</main>
-	</div>
+		</div>
+	</main>
+
+	<footer id="footer">
+
+	</footer>
 
 
 </body>

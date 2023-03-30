@@ -1,27 +1,68 @@
-body{
-	background:linear-gradient(90deg,#9b17908c, #210e63c7, #08748f98);
+body {
+	background: linear-gradient(90deg, #9b17908c, #210e63c7, #08748f98);
+}
+.block {
+	margin-top: 60px;
+
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px 0px 20px 0px;
 }
 
-.card{
+.block_heroes {
+	flex-basis: 33%;
+	margin: 0px 0px 20px 0px;
+}
+
+.card {
+	font-size: 18px;
 	box-sizing: border-box;
-	width: 420px;
-	border: 3px solid green;
+	width: 415px;
+	border: 5px solid rgba(253, 236, 4, 0.693);
 }
-.card-header{
 
+.card-header {
+	color: rgb(136, 0, 255);
+	background-color: rgba(8, 56, 162, 0.39);
+	font-weight: 700;
+	font-size: 20px;
 	text-align: center;
 }
-.card-img-top{
+
+.card-img-top {
 	box-sizing: border-box;
-	width: 100%;
 	height: 550px;
 }
 
-.block_heroes{
-
-	
+.list-group-item {
+	background-color: rgba(33, 76, 91, 0.677);
+	color: black;
+	font-size: 18px;
+	font-weight: 600;
 }
-.block_card{
 
-	
+.list-group-item span {
+	font-weight: 900;
+}
+.card-body{
+background-color: rgba(153, 0, 255, 0.402);
+
+}
+.card-title{
+	font-weight: 700;
+}
+.card-text {
+	display: flex;
+	flex-direction: column;
+	color: rgb(158, 89, 4);
+	font-size: 19px;
+	font-weight: 500;
+}
+
+.dropdown ul{
+height: 400px;
+overflow-y: scroll
 }

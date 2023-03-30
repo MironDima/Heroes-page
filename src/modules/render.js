@@ -1,4 +1,6 @@
+
 const render = (data) => {
+	
 	data.forEach(item => {
 		let arr = [];
 		const renderMovies = () => {
@@ -8,13 +10,12 @@ const render = (data) => {
 				})
 			}
 		}
-		
+
 		renderMovies();
 		const row = document.querySelector('.row');
 		const div = document.createElement('div');
-		div.classList.add('block_heroes');
-		div.innerHTML = `<div class="col-xl-4 col-md-6 col-sm-12 mt-5 mb-3 hero">` +
-			`<div class="card">` +
+		div.classList.add("block_heroes")
+		div.innerHTML = `<div class="card">` +
 			`<div class="card-header">` +
 			`<span>${item.name}</span> </div>` +
 			`<img src= ${item.photo} class="card-img-top" alt=${item.name ? item.name : "no data available"}>` +
@@ -30,12 +31,12 @@ const render = (data) => {
 			`<div class="card-body">` +
 			`<h5 class="card-title">Movies</h5>` +
 			`<p class="card-text">${arr.join('')}</p>` +
-			`</div>`+
+			`</div>` +
 			`</div>`
-			row.append(div)
+
+		row.append(div)
+		
 		console.log(div);
 	})
 }
 export { render }
-
-
