@@ -1,8 +1,9 @@
 import { filter } from "./filter"
 const render = (data) => {
-	
-	data.forEach(item => {
 		const row = document.querySelector('.row');
+		
+
+	data.forEach(item => {
 		const div = document.createElement('div');
 		div.classList.add("block_heroes")
 		div.innerHTML = `<div class="card">` +
@@ -29,7 +30,9 @@ const render = (data) => {
 	const blockMovies = document.querySelector('.block_movies')
 	blockMovies.addEventListener('click', (e) => {
 		let valueCategory = e.target.textContent
+		console.log(valueCategory);
 		filter(data, valueCategory)
+		
 	})
 }
 export { render }
