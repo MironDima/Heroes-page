@@ -1,9 +1,6 @@
 import { render } from "./render"
 
 const filter = (heroes, value) => {
-	let row = document.querySelector('.row');
-	row.textContent = ''
-	
 
 	let newData = []
 	heroes.filter((heroFilter) => {
@@ -15,7 +12,6 @@ const filter = (heroes, value) => {
 	})
 	console.log(newData);
 	render(newData)
-	
 }
 
 export { filter }

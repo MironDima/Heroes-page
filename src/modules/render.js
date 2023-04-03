@@ -1,7 +1,7 @@
 import { filter } from "./filter"
 const render = (data) => {
-		const row = document.querySelector('.row');
-		
+	const row = document.querySelector('.row');
+	row.textContent = ''
 
 	data.forEach(item => {
 		const div = document.createElement('div');
@@ -24,15 +24,16 @@ const render = (data) => {
 			`<p class="card-text">${item.movies ? item.movies : "movies uncnown"}</p>` +
 			`</div>` +
 			`</div>`
-		row.append(div)
+			row.append(div)
 	})
+	
 
 	const blockMovies = document.querySelector('.block_movies')
 	blockMovies.addEventListener('click', (e) => {
 		let valueCategory = e.target.textContent
 		console.log(valueCategory);
 		filter(data, valueCategory)
-		
+
 	})
 }
 export { render }
