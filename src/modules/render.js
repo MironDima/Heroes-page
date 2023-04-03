@@ -1,42 +1,35 @@
-
+import { filter } from "./filter"
 const render = (data) => {
 	
 	data.forEach(item => {
-		let arr = [];
-		const renderMovies = () => {
-			if (item.movies) {
-				item.movies.map(film => {
-					arr.push(`<span>${film}</span>`)
-				})
-			}
-		}
-
-		renderMovies();
 		const row = document.querySelector('.row');
 		const div = document.createElement('div');
 		div.classList.add("block_heroes")
 		div.innerHTML = `<div class="card">` +
 			`<div class="card-header">` +
-			`<span>${item.name}</span> </div>` +
-			`<img src= ${item.photo} class="card-img-top" alt=${item.name ? item.name : "no data available"}>` +
+			`<span>${item.name ? item.name : "name uncnown"}</span> </div>` +
+			`<img src= ${item.photo ? item.photo : "photo uncnown"} class="card-img-top" alt=${item.photo ? item.photo : "photo uncnown"}>` +
+			`<li class="list-group-item"><span>Real name : </span>${item.realName ? item.realName : "realName uncnown"}</li>` +
 			`<ul class="list-group list-group-flush">` +
-			`<li class="list-group-item"><span>Real name : </span>${item.realName ? item.realName : "no data available"}</li>` +
-			`<li class="list-group-item"><span>Species : </span>${item.species ? item.species : "no data available"}</li>` +
-			`<li class="list-group-item"><span>Citizenship : </span>${item.citizenship ? item.citizenship : "no data available"}</li>` +
-			`<li class="list-group-item"><span>Birthday : </span>${item.birthDay ? item.birthDay : "no data available"}</li>` +
-			`<li class="list-group-item"><span>Gender : </span>${item.gender ? item.gender : "no data available"}</li>` +
-			`<li class="list-group-item"><span>Death day : </span>${item.deathDay ? item.deathDay : "no data available"}</li>` +
-			`<li class="list-group-item"><span>Status : </span>${item.status ? item.status : "no data available"}</li>` +
+			`<li class="list-group-item"><span>Species : </span>${item.species ? item.species : "species uncnown"}</li>` +
+			`<li class="list-group-item"><span>Citizenship : </span>${item.citizenship ? item.citizenship : "citizenship available"}</li>` +
+			`<li class="list-group-item"><span>Birthday : </span>${item.birthDay ? item.birthDay : "birthDay uncnown"}</li>` +
+			`<li class="list-group-item"><span>Gender : </span>${item.gender ? item.gender : "gender uncnown"}</li>` +
+			`<li class="list-group-item"><span>Death day : </span>${item.deathDay ? item.deathDay : "deathDay uncnown"}</li>` +
+			`<li class="list-group-item"><span>Status : </span>${item.status ? item.status : "status uncnown"}</li>` +
 			`</ul>` +
-			`<div class="card-body">` +
+			`<div class="card-body movies">` +
 			`<h5 class="card-title">Movies</h5>` +
-			`<p class="card-text">${arr.join('')}</p>` +
+			`<p class="card-text">${item.movies ? item.movies : "movies uncnown"}</p>` +
 			`</div>` +
 			`</div>`
-
 		row.append(div)
-		
-		console.log(div);
+	})
+
+	const blockMovies = document.querySelector('.block_movies')
+	blockMovies.addEventListener('click', (e) => {
+		let valueCategory = e.target.textContent
+		filter(data, valueCategory)
 	})
 }
 export { render }

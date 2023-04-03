@@ -1,7 +1,6 @@
-import ajax from './modules/ajax'
-import filter from './modules/filter'
+import getData from './modules/getdata'
+// import lisiner from './modules/lisiner'
 
-
-ajax()
-filter()
+getData()
+// lisiner()
 
