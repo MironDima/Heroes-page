@@ -1,11 +1,19 @@
-import { filter } from "./filter"
 const render = (data) => {
 	const row = document.querySelector('.row');
-	row.textContent = ''
+	row.textContent = '';
 
 	data.forEach(item => {
+		let arr = []
+		const renderMovies = () => {
+			if (item.movies) {
+				item.movies.map(film => {
+					arr.push(`<p>${film}</p>`)
+				})
+			}
+		}
+		renderMovies()
 		const div = document.createElement('div');
-		div.classList.add("block_heroes")
+		div.classList.add("block_heroes");
 		div.innerHTML = `<div class="card">` +
 			`<div class="card-header">` +
 			`<span>${item.name ? item.name : "name uncnown"}</span> </div>` +
@@ -20,20 +28,11 @@ const render = (data) => {
 			`<li class="list-group-item"><span>Status : </span>${item.status ? item.status : "status uncnown"}</li>` +
 			`</ul>` +
 			`<div class="card-body movies">` +
-			`<h5 class="card-title">Movies</h5>` +
-			`<p class="card-text">${item.movies ? item.movies : "movies uncnown"}</p>` +
+			`<h5 class="card-title">Movies:</h5>` +
+			`<div class="card-text">${arr.join('') ? arr.join('') : "movies uncnown"}</div>` +
 			`</div>` +
 			`</div>`
-			row.append(div)
-	})
-	
-
-	const blockMovies = document.querySelector('.block_movies')
-	blockMovies.addEventListener('click', (e) => {
-		let valueCategory = e.target.textContent
-		console.log(valueCategory);
-		filter(data, valueCategory)
-
-	})
+		row.append(div);
+	});
 }
 export { render }

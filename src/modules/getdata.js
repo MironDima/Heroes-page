@@ -1,13 +1,7 @@
-import { render } from "./render";
-
-const getData = () => {
-	return fetch('dbHeroes.json')
-		.then(response => response.json())
-		.then(data => render(data))
-		.catch(error => console.log(error))
+const getData = (url) => {
+	return fetch(url)
+		.then(response => response.json());
 }
-
-export default getData 
-
+export { getData }
 
 
