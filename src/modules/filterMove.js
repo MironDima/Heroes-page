@@ -1,4 +1,4 @@
-const filter = (heroes, value) => {
+const filterMove = (heroes, value) => {
 	let newData = []
 	heroes.filter((heroFilter) => {
 		for (let key in heroFilter.movies) {
@@ -10,5 +10,5 @@ const filter = (heroes, value) => {
 	console.log(newData);
 	return newData
 }
-export { filter }
+export { filterMove }
 
